@@ -1,0 +1,38 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Platos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="formulario-container">
+            <h2>Formulario</h2>
+            <form id="plato-form" enctype="multipart/form-data">
+                <!-- Agrega el campo oculto para el ID del plato -->
+                <input type="hidden" id="plato-id">
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" required>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" required>
+
+                <button type="button" onclick="crearPlato()">Crear</button>
+                <button type="button" onclick="actualizarPlato()">Actualizar</button>
+            </form>
+        </div>
+       
+        <div id="platos-container" class="platos-grid"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
