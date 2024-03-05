@@ -19,11 +19,10 @@ async function mostrarPlatos() {
   platos.forEach((plato) => {
     const platoDiv = document.createElement("div");
     platoDiv.innerHTML = `
-    <img src="./imgs/PlatoRicoMMMmDeli.jpg" alt="" style="width: 200px;">
-
-          <p>Nombre: ${plato.nombre}</p>
+          <img src="./imgs/PlatoRicoMMMmDeli.jpg" alt="" style="width: 200px;"> </br> </br>
+          <p> <Strong>${plato.nombre}</Strong></p> </br>
           <p>Descripción: ${plato.descripcion}</p>
-          <p>Precio: ${plato.precio}</p>
+          <p>Precio: ${plato.precio}</p> </br>
           <button onclick="cargarPlatoEnFormulario(${plato.id}, '${plato.nombre}', '${plato.descripcion}', ${plato.precio})">Editar</button>
           <button onclick="eliminarPlato(${plato.id})">Eliminar</button>
           <hr>
